@@ -1,0 +1,9 @@
+<h1><%=t(:'Editing User')%></h1>
+
+<% if @user.id == cookies.signed[:user_id]%>
+    <%= render 'form', user: @user %>
+<% else %>
+    <p><%=t(:'Access error')%></p>
+<%end%>
+
+<%= link_to t(:'Show'), @user %>

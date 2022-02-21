@@ -1,0 +1,15 @@
+<p><%= t(:'Leaders')%></p>
+<table>
+        <tr>
+            <th><%= t(:'Number')%></th>
+            <th><%= t(:'Name')%></th>
+            <th><%= t(:'Result')%></th>
+        </tr>
+    <% @show.each_with_index do |element, index| %>
+        <tr>
+            <td><%= index+1 %></td>
+            <td><%= element["username"] %></td>
+            <td><%= element["result"] %></td>
+        </tr>
+    <% end %>
+</table>

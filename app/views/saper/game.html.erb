@@ -1,0 +1,11 @@
+<div id="timer">0</div>
+<div id="app"></div>
+<button><%= t(:'Restart')%></button>
+<%= javascript_pack_tag 'saper' %>
+<script>
+function Ajax() {
+    $.post('/saper/addresult/', {
+        num: document.getElementById("timer").childNodes[0].nodeValue
+    })
+}
+</script>
